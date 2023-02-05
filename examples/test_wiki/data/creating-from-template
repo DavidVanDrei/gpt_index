@@ -1,0 +1,52 @@
+Creating a repository from a template - GitHub DocsSkip to main contentGitHub DocsVersion: Free, Pro, & TeamSearch GitHub DocsAll productsRepositoriesCreate & manage repositoriesAbout repositoriesBest practicesCreating a new repositoryCreate from a templateCreate a template repoIssues-only repositoryDuplicating a repositoryCloning a repositoryTroubleshooting cloning errorsRenaming a repositoryTransferring a repositoryDeleting a repositoryRestore deleted repositoryManage repository settingsCustomize your repositoryAbout READMEsLicensing a repositoryDisplay a sponsor buttonSocial media previewClassify with topicsAbout code ownersRepository languagesAbout CITATION filesEnable featuresDisabling issuesDisable classic projectsManage GitHub Actions settingsDiscussionsSecurity & analysisManage repository settingsRepository visibilityTeams & peopleManage the forking policyManage pull request reviewsManage the commit signoff policyManage the push policyManaging Git LFS objects in archivesEmail notifications for pushesConfigure autolinksTag protection rulesBranches and mergesManage branchesView branchesRenaming a branchChange the default branchDelete & restore branchesConfigure PR mergesAbout merge methodsConfigure commit mergingConfigure commit squashingConfigure commit rebasingManaging merge queueManage branch updatesManage auto mergeAutomatic branch deletionMergeability of PRsAbout protected branchesBranch protection ruleRequired status checksWork with filesManaging filesCreating new filesAdd a fileMove a fileEdit filesRenaming a fileDelete filesHow changed files appearNew code view (beta)Using filesNavigating code on GitHubView files and track file changesPermanent links to filesWorking with non-code filesManaging large filesLarge filesGit Large File StorageInstall Git LFSConfigure Git LFSStorage & bandwidthCollaborationMove a file to Git LFSRemove filesResolve upload failuresRelease projectsAbout releasesManage releasesView releases & tagsSearching releasesLinking to releasesComparing releasesAutomated release notesAutomate release formsView activity and dataView deployment activityAbout repository graphsView repository activityView repository trafficView project contributorsAnalyze changesConnections between repositoriesArchive a repositoryArchiving repositoriesArchive content & dataReference & cite contentBacking up a repositoryRepositories/Create & manage repositories/Create from a templateCreating a repository from a templateIn this articleAbout repository templatesCreating a repository from a templateYou can generate a new repository with the same directory structure and files as an existing repository.About repository templates
+Anyone with read permissions to a template repository can create a repository from that template. For more information, see "Creating a template repository."
+
+Tip: You can also create a repository from a template using the GitHub CLI. For more information, see "gh repo create" in the GitHub CLI documentation.
+
+You can choose to include the directory structure and files from only the default branch of the template repository or to include all branches. Branches created from a template have unrelated histories, which means you cannot create pull requests or merge between the branches.
+Creating a repository from a template is similar to forking a repository, but there are important differences:
+
+A new fork includes the entire commit history of the parent repository, while a repository created from a template starts with a single commit.
+Commits to a fork don't appear in your contributions graph, while commits to a repository created from a template do appear in your contribution graph.
+A fork can be a temporary way to contribute code to an existing project, while creating a repository from a template starts a new project quickly.
+
+For more information about forks, see "About forks."
+Creating a repository from a template
+
+
+On GitHub.com, navigate to the main page of the repository.
+
+
+Above the file list, click Use this template.
+
+
+Select Create a new repository.
+
+
+Note: Alternatively, you can open the template in a codespace and publish your work to a new repository later. For more information, see "Creating a codespace from a template."
+
+
+
+Use the Owner drop-down menu, and select the account you want to own the repository.
+
+
+
+Type a name for your repository, and an optional description.
+
+
+
+Choose a repository visibility. For more information, see "About repositories."
+
+
+
+Optionally, to include the directory structure and files from all branches in the template, and not just the default branch, select Include all branches.
+
+
+
+Optionally, if the personal account or organization in which you're creating uses any GitHub Apps from GitHub Marketplace, select any apps you'd like to use in the repository.
+
+
+
+Click Create repository from template.
+
+Did this doc help you?Privacy policyHelp us make these docs great!All GitHub docs are open source. See something that's wrong or unclear? Submit a pull request.Make a contributionOr, learn how to contribute.Still need help?Ask the GitHub communityContact support© 2023 GitHub, Inc.TermsPrivacySecurityStatusHelpContact GitHubPricingDeveloper APITrainingBlogAbout

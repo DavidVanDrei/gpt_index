@@ -1,0 +1,27 @@
+Renaming a repository - GitHub DocsSkip to main contentGitHub DocsVersion: Free, Pro, & TeamSearch GitHub DocsAll productsRepositoriesCreate & manage repositoriesAbout repositoriesBest practicesCreating a new repositoryCreate from a templateCreate a template repoIssues-only repositoryDuplicating a repositoryCloning a repositoryTroubleshooting cloning errorsRenaming a repositoryTransferring a repositoryDeleting a repositoryRestore deleted repositoryManage repository settingsCustomize your repositoryAbout READMEsLicensing a repositoryDisplay a sponsor buttonSocial media previewClassify with topicsAbout code ownersRepository languagesAbout CITATION filesEnable featuresDisabling issuesDisable classic projectsManage GitHub Actions settingsDiscussionsSecurity & analysisManage repository settingsRepository visibilityTeams & peopleManage the forking policyManage pull request reviewsManage the commit signoff policyManage the push policyManaging Git LFS objects in archivesEmail notifications for pushesConfigure autolinksTag protection rulesBranches and mergesManage branchesView branchesRenaming a branchChange the default branchDelete & restore branchesConfigure PR mergesAbout merge methodsConfigure commit mergingConfigure commit squashingConfigure commit rebasingManaging merge queueManage branch updatesManage auto mergeAutomatic branch deletionMergeability of PRsAbout protected branchesBranch protection ruleRequired status checksWork with filesManaging filesCreating new filesAdd a fileMove a fileEdit filesRenaming a fileDelete filesHow changed files appearNew code view (beta)Using filesNavigating code on GitHubView files and track file changesPermanent links to filesWorking with non-code filesManaging large filesLarge filesGit Large File StorageInstall Git LFSConfigure Git LFSStorage & bandwidthCollaborationMove a file to Git LFSRemove filesResolve upload failuresRelease projectsAbout releasesManage releasesView releases & tagsSearching releasesLinking to releasesComparing releasesAutomated release notesAutomate release formsView activity and dataView deployment activityAbout repository graphsView repository activityView repository trafficView project contributorsAnalyze changesConnections between repositoriesArchive a repositoryArchiving repositoriesArchive content & dataReference & cite contentBacking up a repositoryRepositories/Create & manage repositories/Renaming a repositoryRenaming a repositoryYou can rename a repository if you're either an organization owner or have admin permissions for the repository.When you rename a repository, all existing information, with the exception of project site URLs, is automatically redirected to the new name, including:
+
+Issues
+Wikis
+Stars
+Followers
+
+For more information on project sites, see "About GitHub Pages."
+In addition to redirecting web traffic, all git clone, git fetch, or git push operations targeting the previous location will continue to function as if made on the new location. However, to reduce confusion, we strongly recommend updating any existing local clones to point to the new repository URL. You can do this by using git remote on the command line:
+$ git remote set-url origin NEW_URL
+For more information, see "Managing remote repositories."
+If you plan to rename a repository that has a GitHub Pages site, we recommend using a custom domain for your site. This ensures that the site's URL isn't impacted by renaming the repository. For more information, see "About custom domains and GitHub Pages site." 
+
+Note: GitHub will not redirect calls to an action hosted by a renamed repository. Any workflow that uses that action will fail with the error repository not found. Instead, create a new repository and action with the new name and archive the old repository. For more information, see "Archiving repositories."
+
+
+Warning: If you create a new repository under your account in the future, do not reuse the original name of the renamed repository. If you do, redirects to the renamed repository will no longer work.
+
+
+On GitHub.com, navigate to the main page of the repository.
+Under your repository name, click 
+Settings.
+
+Under the Repository Name heading, type the new name of your repository.
+
+Click Rename. You're done!
+Did this doc help you?Privacy policyHelp us make these docs great!All GitHub docs are open source. See something that's wrong or unclear? Submit a pull request.Make a contributionOr, learn how to contribute.Still need help?Ask the GitHub communityContact support© 2023 GitHub, Inc.TermsPrivacySecurityStatusHelpContact GitHubPricingDeveloper APITrainingBlogAbout

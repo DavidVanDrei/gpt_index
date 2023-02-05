@@ -1,0 +1,50 @@
+About repositories - GitHub DocsSkip to main contentGitHub DocsVersion: Free, Pro, & TeamSearch GitHub DocsAll productsRepositoriesCreate & manage repositoriesAbout repositoriesBest practicesCreating a new repositoryCreate from a templateCreate a template repoIssues-only repositoryDuplicating a repositoryCloning a repositoryTroubleshooting cloning errorsRenaming a repositoryTransferring a repositoryDeleting a repositoryRestore deleted repositoryManage repository settingsCustomize your repositoryAbout READMEsLicensing a repositoryDisplay a sponsor buttonSocial media previewClassify with topicsAbout code ownersRepository languagesAbout CITATION filesEnable featuresDisabling issuesDisable classic projectsManage GitHub Actions settingsDiscussionsSecurity & analysisManage repository settingsRepository visibilityTeams & peopleManage the forking policyManage pull request reviewsManage the commit signoff policyManage the push policyManaging Git LFS objects in archivesEmail notifications for pushesConfigure autolinksTag protection rulesBranches and mergesManage branchesView branchesRenaming a branchChange the default branchDelete & restore branchesConfigure PR mergesAbout merge methodsConfigure commit mergingConfigure commit squashingConfigure commit rebasingManaging merge queueManage branch updatesManage auto mergeAutomatic branch deletionMergeability of PRsAbout protected branchesBranch protection ruleRequired status checksWork with filesManaging filesCreating new filesAdd a fileMove a fileEdit filesRenaming a fileDelete filesHow changed files appearNew code view (beta)Using filesNavigating code on GitHubView files and track file changesPermanent links to filesWorking with non-code filesManaging large filesLarge filesGit Large File StorageInstall Git LFSConfigure Git LFSStorage & bandwidthCollaborationMove a file to Git LFSRemove filesResolve upload failuresRelease projectsAbout releasesManage releasesView releases & tagsSearching releasesLinking to releasesComparing releasesAutomated release notesAutomate release formsView activity and dataView deployment activityAbout repository graphsView repository activityView repository trafficView project contributorsAnalyze changesConnections between repositoriesArchive a repositoryArchiving repositoriesArchive content & dataReference & cite contentBacking up a repositoryRepositories/Create & manage repositories/About repositoriesAbout repositoriesIn this articleAbout repositoriesAbout repository visibilityLimits for viewing content and diffs in a repositoryFurther readingA repository contains all of your project's files and each file's revision history. You can discuss and manage your project's work within the repository.About repositories
+You can own repositories individually, or you can share ownership of repositories with other people in an organization.
+You can restrict who has access to a repository by choosing the repository's visibility. For more information, see "About repository visibility."
+For user-owned repositories, you can give other people collaborator access so that they can collaborate on your project. If a repository is owned by an organization, you can give organization members access permissions to collaborate on your repository. For more information, see "Permission levels for a personal account repository" and "Repository roles for an organization."
+With GitHub Free for personal accounts and organizations, you can work with unlimited collaborators on unlimited public repositories with a full feature set, or unlimited private repositories with a limited feature set. To get advanced tooling for private repositories, you can upgrade to GitHub Pro, GitHub Team, or GitHub Enterprise Cloud. For more information, see "GitHub's products."
+You can use repositories to manage your work and collaborate with others.
+
+You can use issues to collect user feedback, report software bugs, and organize tasks you'd like to accomplish. For more information, see "About issues."
+You can use GitHub Discussions to ask and answer questions, share information, make announcements, and conduct or participate in conversations about a project. For more information, see "About discussions."
+You can use pull requests to propose changes to a repository. For more information, see "About pull requests."
+You can use project boards to organize and prioritize your issues and pull requests. For more information, see "About project boards."
+
+Repositories and individual files are subject to size limits. For more information, see "What is my disk quota?"
+To learn how to use repositories most effectively, see "Best practices for repositories."
+About repository visibility
+You can restrict who has access to a repository by choosing a repository's visibility:  public or private.
+When you create a repository, you can choose to make the repository public or private. Repositories in organizations that use GitHub Enterprise Cloud and are owned by an enterprise account can also be created with internal visibility. For more information, see the GitHub Enterprise Cloud documentation.
+
+Public repositories are accessible to everyone on the internet.
+Private repositories are only accessible to you, people you explicitly share access with, and, for organization repositories, certain organization members.
+
+Organization owners always have access to every repository created in an organization. For more information, see "Repository roles for an organization."
+People with admin permissions for a repository can change an existing repository's visibility. For more information, see "Setting repository visibility."
+Limits for viewing content and diffs in a repository
+Certain types of resources can be quite large, requiring excessive processing on GitHub. Because of this, limits are set to ensure requests complete in a reasonable amount of time.
+Most of the limits below affect both GitHub and the API.
+Text limits
+Text files over 512 KB are always displayed as plain text. Code is not syntax highlighted, and prose files are not converted to HTML (such as Markdown, AsciiDoc, etc.).
+Text files over 5 MB are only available through their raw URLs, which are served through raw.githubusercontent.com; for example, https://raw.githubusercontent.com/octocat/Spoon-Knife/master/index.html. Click the Raw button to get the raw URL for a file.
+Diff limits
+Because diffs can become very large, we impose these limits on diffs for commits, pull requests, and compare views:
+
+In a pull request, no total diff may exceed 20,000 lines that you can load or 1 MB of raw diff data.
+No single file's diff may exceed 20,000 lines that you can load or 500 KB of raw diff data. Four hundred lines and 20 KB are automatically loaded for a single file.
+The maximum number of files in a single diff is limited to 300.
+The maximum number of renderable files (such as images, PDFs, and GeoJSON files) in a single diff is limited to 25.
+
+Some portions of a limited diff may be displayed, but anything exceeding the limit is not shown.
+Commit listings limits
+The compare view and pull requests pages display a list of commits between the base and head revisions. These lists are limited to 250 commits. If they exceed that limit, a note indicates that additional commits are present (but they're not shown).
+Further reading
+
+"About forks"
+"Collaborating with issues and pull requests"
+"Managing your work on GitHub"
+"Administering a repository"
+"Visualizing repository data with graphs"
+"About wikis"
+"GitHub glossary"
+Did this doc help you?Privacy policyHelp us make these docs great!All GitHub docs are open source. See something that's wrong or unclear? Submit a pull request.Make a contributionOr, learn how to contribute.Still need help?Ask the GitHub communityContact support© 2023 GitHub, Inc.TermsPrivacySecurityStatusHelpContact GitHubPricingDeveloper APITrainingBlogAbout

@@ -1,0 +1,70 @@
+Duplicating a repository - GitHub DocsSkip to main contentGitHub DocsVersion: Free, Pro, & TeamSearch GitHub DocsAll productsRepositoriesCreate & manage repositoriesAbout repositoriesBest practicesCreating a new repositoryCreate from a templateCreate a template repoIssues-only repositoryDuplicating a repositoryCloning a repositoryTroubleshooting cloning errorsRenaming a repositoryTransferring a repositoryDeleting a repositoryRestore deleted repositoryManage repository settingsCustomize your repositoryAbout READMEsLicensing a repositoryDisplay a sponsor buttonSocial media previewClassify with topicsAbout code ownersRepository languagesAbout CITATION filesEnable featuresDisabling issuesDisable classic projectsManage GitHub Actions settingsDiscussionsSecurity & analysisManage repository settingsRepository visibilityTeams & peopleManage the forking policyManage pull request reviewsManage the commit signoff policyManage the push policyManaging Git LFS objects in archivesEmail notifications for pushesConfigure autolinksTag protection rulesBranches and mergesManage branchesView branchesRenaming a branchChange the default branchDelete & restore branchesConfigure PR mergesAbout merge methodsConfigure commit mergingConfigure commit squashingConfigure commit rebasingManaging merge queueManage branch updatesManage auto mergeAutomatic branch deletionMergeability of PRsAbout protected branchesBranch protection ruleRequired status checksWork with filesManaging filesCreating new filesAdd a fileMove a fileEdit filesRenaming a fileDelete filesHow changed files appearNew code view (beta)Using filesNavigating code on GitHubView files and track file changesPermanent links to filesWorking with non-code filesManaging large filesLarge filesGit Large File StorageInstall Git LFSConfigure Git LFSStorage & bandwidthCollaborationMove a file to Git LFSRemove filesResolve upload failuresRelease projectsAbout releasesManage releasesView releases & tagsSearching releasesLinking to releasesComparing releasesAutomated release notesAutomate release formsView activity and dataView deployment activityAbout repository graphsView repository activityView repository trafficView project contributorsAnalyze changesConnections between repositoriesArchive a repositoryArchiving repositoriesArchive content & dataReference & cite contentBacking up a repositoryRepositories/Create & manage repositories/Duplicating a repositoryDuplicating a repositoryIn this articleMirroring a repositoryMirroring a repository that contains Git Large File Storage objectsMirroring a repository in another locationFurther readingTo maintain a mirror of a repository without forking it, you can run a special clone command, then mirror-push to the new repository.MacWindowsLinux
+Note: If you have a project hosted on another version control system, you can automatically import your project to GitHub using the GitHub Importer tool. For more information, see "About GitHub Importer."
+
+Before you can push the original repository to your new copy, or mirror, of the repository, you must create the new repository on GitHub.com. In these examples, exampleuser/new-repository or exampleuser/mirrored are the mirrors.
+Mirroring a repository
+
+Open TerminalTerminalGit Bash.
+Create a bare clone of the repository.
+$ git clone --bare https://github.com/EXAMPLE-USER/OLD-REPOSITORY.git
+
+Mirror-push to the new repository.
+$ cd OLD-REPOSITORY.git
+$ git push --mirror https://github.com/EXAMPLE-USER/NEW-REPOSITORY.git
+
+Remove the temporary local repository you created earlier.
+$ cd ..
+$ rm -rf OLD-REPOSITORY.git
+
+
+Mirroring a repository that contains Git Large File Storage objects
+
+Open TerminalTerminalGit Bash.
+Create a bare clone of the repository. Replace the example username with the name of the person or organization who owns the repository, and replace the example repository name with the name of the repository you'd like to duplicate.
+$ git clone --bare https://github.com/EXAMPLE-USER/OLD-REPOSITORY.git
+
+Navigate to the repository you just cloned.
+$ cd OLD-REPOSITORY.git
+
+Pull in the repository's Git Large File Storage objects.
+$ git lfs fetch --all
+
+Mirror-push to the new repository.
+$ git push --mirror https://github.com/EXAMPLE-USER/NEW-REPOSITORY.git
+
+Push the repository's Git Large File Storage objects to your mirror.
+$ git lfs push --all https://github.com/EXAMPLE-USER/NEW-REPOSITORY.git
+
+Remove the temporary local repository you created earlier.
+$ cd ..
+$ rm -rf OLD-REPOSITORY.git
+
+
+Mirroring a repository in another location
+If you want to mirror a repository in another location, including getting updates from the original, you can clone a mirror and periodically push the changes.
+
+
+Open TerminalTerminalGit Bash.
+
+
+Create a bare mirrored clone of the repository.
+$ git clone --mirror https://github.com/EXAMPLE-USER/REPOSITORY-TO-MIRROR.git
+
+
+Set the push location to your mirror.
+$ cd REPOSITORY-TO-MIRROR
+  $ git remote set-url --push origin https://github.com/EXAMPLE-USER/MIRRORED
+As with a bare clone, a mirrored clone includes all remote branches and tags, but all local references will be overwritten each time you fetch, so it will always be the same as the original repository. Setting the URL for pushes simplifies pushing to your mirror.
+
+
+To update your mirror, fetch updates and push.
+$ git fetch -p origin
+$ git push --mirror
+
+
+Further reading
+
+"Pushing changes to GitHub"
+"About Git Large File Storage and GitHub Desktop"
+"About GitHub Importer"
+Did this doc help you?Privacy policyHelp us make these docs great!All GitHub docs are open source. See something that's wrong or unclear? Submit a pull request.Make a contributionOr, learn how to contribute.Still need help?Ask the GitHub communityContact support© 2023 GitHub, Inc.TermsPrivacySecurityStatusHelpContact GitHubPricingDeveloper APITrainingBlogAbout
